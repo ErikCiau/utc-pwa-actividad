@@ -1,0 +1,13 @@
+.camera-space {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .picture {
+        border-radius: 1rem;
+    }
+}
+
+.title {
+    padding: 1rem;
+    color: white;
+}

@@ -1,9 +1,27 @@
 import { NgModule } from "@angular/core";
-import { RouterModule } from "@angular/router";
+import { RouterModule, Routes } from "@angular/router";
+
+const routes: Routes = [
+  {
+    path: '',
+    loadChildren: () => import('./NoteList/note-list.module')
+      .then(
+        m => m.NoteListModule
+      )
+  },
+  {
+    path: 'scanner',
+    loadChildren: () => import('./ScannerTodo/scanner-todo.module')
+      .then(
+        m => m.ScannerTodoModule
+      )
+  }
+]
+
 
 @NgModule({
   imports: [
-    RouterModule.forChild([])
+    RouterModule.forChild(routes)
   ],
   exports: [
     RouterModule

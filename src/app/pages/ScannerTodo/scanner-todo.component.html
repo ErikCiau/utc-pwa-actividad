@@ -1,0 +1,13 @@
+<section id="scanner-qr">
+    <div class="title">
+        <h1>Escanear qr de tarea</h1>
+    </div>
+
+    <div class="camera-space">
+        <div>
+            <video *ngIf="videoCapable" #video1 width="300" autoplay class="picture"></video>
+            <div *ngIf="!videoCapable">Access to camera denied</div>
+        </div>
+    </div>
+
+</section>
